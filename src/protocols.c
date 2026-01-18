@@ -294,7 +294,7 @@ static void update_watchdogs()
  *    - Feed/reset the watchdogs
  *    - Check if any of the watchdogs has expired
  */
-static void *run_event_loop()
+static void *run_event_loop(void *arg)
 {
    while (running)
    {
@@ -634,3 +634,4 @@ void DS_ResetRobotPackets()
    sent_robot_packets = 0;
    received_robot_packets = 0;
 }
+
